@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cd DEVCLOUD/Codepipeline-demo-main  # 👈 navigate to the correct folder
+      - cd DEVCLOUD/Codepipeline-demo-main  # Go into subfolder
       - echo Current directory: $(pwd)
       - ls -la
       - echo Building the Docker image...
@@ -26,4 +26,5 @@ phases:
 
 artifacts:
   files:
-    - DEVCLOUD/Codepipeline-demo-main/imagedefinitions.json  # 👈 updated path
+    - DEVCLOUD/Codepipeline-demo-main/imagedefinitions.json  # ✅ Match the actual location of the file
+
